@@ -1,0 +1,46 @@
+@import '../_variables.scss';
+
+header {
+    margin-top: 30px;
+
+    h1 {
+        text-align: center;
+        font-family: $f-prim;
+        margin: 0;
+
+        .logo {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            vertical-align: middle;
+            background-image: url($img-logo);
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+nav {
+    padding: 30px;
+
+    a {
+        display: inline-block;
+        width: 30%;
+        font-weight: bold;
+        text-decoration: none;
+        color: $c-text;
+
+        &.router-link-exact-active {
+            color: $c-prim;
+        }
+    }
+}
+
+main {
+    text-align: center;
+}
