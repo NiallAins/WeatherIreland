@@ -129,14 +129,6 @@ var appRoutes = [
         component: _components_forcast_forcast_component__WEBPACK_IMPORTED_MODULE_5__["ForcastComponent"]
     },
     {
-        path: 'WeatherIreland/current',
-        component: _components_current_current_component__WEBPACK_IMPORTED_MODULE_6__["CurrentComponent"]
-    },
-    {
-        path: 'WeatherIreland/forcast',
-        component: _components_forcast_forcast_component__WEBPACK_IMPORTED_MODULE_5__["ForcastComponent"]
-    },
-    {
         path: '',
         component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
     }
