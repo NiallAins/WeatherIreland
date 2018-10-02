@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\nainsworth\Documents\ngWeather\weatherApp\src\global.scss */"./src/global.scss");
+module.exports = __webpack_require__(/*! C:\Users\nainsworth\Documents\ngWeather\weatherIreland\src\global.scss */"./src/global.scss");
 
 
 /***/ })

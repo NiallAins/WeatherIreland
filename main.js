@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n\t<h1>\n\t\t<div class=\"logo\"></div>\n\t\tWeather {{ city.current }}\n\t</h1>\n</header>\n<nav>\n\t<a routerLink=\"/\">Home</a> |\n\t<a routerLink=\"/current\">Current Weather</a> |\n\t<a routerLink=\"/forcast\">Forcast</a>\n</nav>\n<main>\n\t<router-outlet></router-outlet>\n</main>\n\n"
+module.exports = "<header>\r\n\t<h1>\r\n\t\t<div class=\"logo\"></div>\r\n\t\tWeather {{ city.current }}\r\n\t</h1>\r\n</header>\r\n<nav>\r\n\t<a routerLink=\"/\">Home</a> |\r\n\t<a routerLink=\"/current\">Current Weather</a> |\r\n\t<a routerLink=\"/forcast\">Forcast</a>\r\n</nav>\r\n<main>\r\n\t<router-outlet></router-outlet>\r\n</main>\r\n\r\n"
 
 /***/ }),
 
@@ -129,6 +129,14 @@ var appRoutes = [
         component: _components_forcast_forcast_component__WEBPACK_IMPORTED_MODULE_5__["ForcastComponent"]
     },
     {
+        path: 'WeatherIreland/current',
+        component: _components_current_current_component__WEBPACK_IMPORTED_MODULE_6__["CurrentComponent"]
+    },
+    {
+        path: 'WeatherIreland/forcast',
+        component: _components_forcast_forcast_component__WEBPACK_IMPORTED_MODULE_5__["ForcastComponent"]
+    },
+    {
         path: '',
         component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
     }
@@ -215,7 +223,7 @@ var City = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "The weather in {{ city.current }} is currently:\n<br/>\n<weather-report\n\t[icon]=\"iconNum\"\n\t[desc]=\"weatherDesc\"\n\t[temp]=\"temp\"\n></weather-report>"
+module.exports = "The weather in {{ city.current }} is currently:\r\n<br/>\r\n<weather-report\r\n\t[icon]=\"iconNum\"\r\n\t[desc]=\"weatherDesc\"\r\n\t[temp]=\"temp\"\r\n></weather-report>"
 
 /***/ }),
 
@@ -302,7 +310,7 @@ var CurrentComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "The weather in {{ city.current }} this week will be:\n<br/>\n<div\n\tclass\t=\"day\"\n\t*ngFor\t=\"let day of forcastDays\"\n>\n\t<h2>{{ day.name }}</h2>\n\t<weather-report\n\t\t[icon]=\"day.iconNum\"\n\t\t[desc]=\"day.weatherDesc\"\n\t\t[temp]=\"day.temp\"\n\t></weather-report>\n</div>\n<div class=\"temp\">\n\tThe temperature in {{ city.current }} this week will be:\n\t<svg width=\"800\" height=\"400\"></svg>\n</div>"
+module.exports = "The weather in {{ city.current }} this week will be:\r\n<br/>\r\n<div\r\n\tclass\t=\"day\"\r\n\t*ngFor\t=\"let day of forcastDays\"\r\n>\r\n\t<h2>{{ day.name }}</h2>\r\n\t<weather-report\r\n\t\t[icon]=\"day.iconNum\"\r\n\t\t[desc]=\"day.weatherDesc\"\r\n\t\t[temp]=\"day.temp\"\r\n\t></weather-report>\r\n</div>\r\n<div class=\"temp\">\r\n\tThe temperature in {{ city.current }} this week will be:\r\n\t<svg width=\"800\" height=\"400\"></svg>\r\n</div>"
 
 /***/ }),
 
@@ -478,7 +486,7 @@ var ForcastComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "Discover whether the weather is fine.\n<br/>\nIn the present or future.\n<ul class\t\t=\"dropdown\"\n\t[ngClass]\t=\"{ open : dropdownOpen }\"\n\t(click)\t\t=\"dropdownOpen = !dropdownOpen\"\n\t(mouseleave)=\"dropdownOpen = false\"\n>\n\t<li> {{ city.current }} </li>\n\t<li *ngFor\t=\"let c of cities\"\n\t\t(click)\t=\"changeCity(c)\"\n\t>\n\t\t{{ c }}\n\t</li>\n</ul>"
+module.exports = "Discover whether the weather is fine.\r\n<br/>\r\nIn the present or future.\r\n<ul class\t\t=\"dropdown\"\r\n\t[ngClass]\t=\"{ open : dropdownOpen }\"\r\n\t(click)\t\t=\"dropdownOpen = !dropdownOpen\"\r\n\t(mouseleave)=\"dropdownOpen = false\"\r\n>\r\n\t<li> {{ city.current }} </li>\r\n\t<li *ngFor\t=\"let c of cities\"\r\n\t\t(click)\t=\"changeCity(c)\"\r\n\t>\r\n\t\t{{ c }}\r\n\t</li>\r\n</ul>"
 
 /***/ }),
 
@@ -557,7 +565,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div\n\tclass\t\t=\"weather-report\"\n\t[ngClass]\t=\"{ loading: (!desc || !temp) }\"\n>\n\t<div class=\"loader\"></div>\n\t<div\n\t\tclass\t\t=\"icon\"\n\t\t[ngStyle]\t=\"{\n\t\t\tbackgroundImage: 'url(' + iconUrl + icon + '.svg)'\n\t\t}\"\n\t></div>\n\t<span class=\"desc\">{{ desc }}</span>\n\t<br/>\n\t{{ temp }} Degrees Celsius\n</div>"
+module.exports = "<div\r\n\tclass\t\t=\"weather-report\"\r\n\t[ngClass]\t=\"{ loading: (!desc || !temp) }\"\r\n>\r\n\t<div class=\"loader\"></div>\r\n\t<div\r\n\t\tclass\t\t=\"icon\"\r\n\t\t[ngStyle]\t=\"{\r\n\t\t\tbackgroundImage: 'url(' + iconUrl + icon + '.svg)'\r\n\t\t}\"\r\n\t></div>\r\n\t<span class=\"desc\">{{ desc }}</span>\r\n\t<br/>\r\n\t{{ temp }} Degrees Celsius\r\n</div>"
 
 /***/ }),
 
@@ -702,7 +710,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\nainsworth\Documents\ngWeather\weatherApp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\nainsworth\Documents\ngWeather\weatherIreland\src\main.ts */"./src/main.ts");
 
 
 /***/ })
