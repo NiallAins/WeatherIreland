@@ -18,6 +18,14 @@ const appRoutes: Routes = [
     component:  ForcastComponent
   },
   {
+    path: 'WeatherIreland/current',
+    component:  CurrentComponent
+  },
+  {
+    path: 'WeatherIreland/forcast',
+    component:  ForcastComponent
+  },
+  {
     path: '',
     component:  HomeComponent
   }
