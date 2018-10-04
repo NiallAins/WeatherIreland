@@ -263,7 +263,7 @@ var CurrentComponent = /** @class */ (function () {
     }
     CurrentComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = 'http://api.openweathermap.org/data/2.5/weather?q=' +
+        var url = 'https://api.openweathermap.org/data/2.5/weather?q=' +
             this.city.current +
             '&APPID=a1d05b2b8a0e1a54cfe36b1dabdc519b';
         fetch(url)
@@ -356,7 +356,7 @@ var ForcastComponent = /** @class */ (function () {
     }
     ForcastComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var url = 'http://api.openweathermap.org/data/2.5/forecast?q=' +
+        var url = 'https://api.openweathermap.org/data/2.5/forecast?q=' +
             this.city.current +
             '&APPID=a1d05b2b8a0e1a54cfe36b1dabdc519b';
         fetch(url)
